@@ -5,15 +5,11 @@ const path = require('path');
 
 
 const { DB_URL } = require("./config.js");
+console.log(DB_URL)
 
-
-//   postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs
-//   postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
 const sequelize = new Sequelize(`${DB_URL}`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-  dialect: 'postgres',
-  protocol: 'postgres',
 });
 
 const basename = path.basename(__filename);
