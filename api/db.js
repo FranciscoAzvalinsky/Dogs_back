@@ -2,7 +2,7 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
-import pg from 'pg';
+const pg = require('pg');
 
 
 const { DB_URL } = require("./config.js");
