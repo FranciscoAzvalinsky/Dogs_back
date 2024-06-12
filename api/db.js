@@ -2,6 +2,7 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
+import pg from 'pg';
 
 
 const { DB_URL } = require("./config.js");
@@ -9,6 +10,7 @@ const { DB_URL } = require("./config.js");
 const sequelize = new Sequelize(`${DB_URL}`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+  dialectModule: pg
 });
 
 const basename = path.basename(__filename);
