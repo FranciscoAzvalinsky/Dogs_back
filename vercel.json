@@ -1,9 +1,8 @@
 {
-    "build": [
-        {
+    "build": {
             "src": "./index.js"
         }
-    ],
+    ,
     "routes": [
         {
             "src": "/(.*)",
