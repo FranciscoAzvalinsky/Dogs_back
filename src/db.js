@@ -5,7 +5,6 @@ const path = require('path');
 
 
 const { DB_URL } = require("./config.js");
-console.log(DB_URL)
 
 const sequelize = new Sequelize(`${DB_URL}`, {
   logging: false, // set to console.log to see the raw SQL queries
