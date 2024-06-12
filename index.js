@@ -1,6 +1,6 @@
-const server = require("./src/app.js");
-const { conn } = require("./src/db.js");
-const { PORT, LOCALHOST } = require("./src/config.js");
+const server = require("./api/index.js");
+const { conn } = require("./api/db.js");
+const { PORT, LOCALHOST } = require("./api/config.js");
 
 const startServer = async () => {
   try {
